@@ -9,7 +9,7 @@ class Frame():
         self.images = []
         maxsize = (1024, 1024)
         include_extension = ['.jpg', '.png']
-        directory = '~/pics/'
+        directory = os.path.expanduser('~/') + 'pics/'
         for image_file in os.listdir(directory):
             #imageFile = "~/pics/" + str(a) + ".jpg"
             if os.path.splitext(image_file)[1] not in include_extension:

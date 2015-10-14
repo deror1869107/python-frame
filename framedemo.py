@@ -8,7 +8,7 @@ class Frame():
         imageFile = ""
         self.images = []
         for a in range(1, 4):
-            imageFile = "~/" + str(a) + ".jpg"
+            imageFile = os.path.expanduser('~/') + str(a) + ".jpg"
             self.images.append(ImageTk.PhotoImage(Image.open(imageFile)))
         self.imageindex = 0
         self.imagemax = 3
